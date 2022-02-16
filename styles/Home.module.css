@@ -1,14 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
 .container {
   padding: 0 2rem;
+  
 }
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
+  font-family: 'Poppins', sans-serif;
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 }
 
@@ -40,9 +44,10 @@
 }
 
 .title {
-  margin: 0;
+  margin-top: 2rem;
   line-height: 1.15;
   font-size: 4rem;
+  font-family: 'Roboto Slab', serif;
 }
 
 .title,
@@ -51,7 +56,6 @@
 }
 
 .description {
-  margin: 4rem 0;
   line-height: 1.5;
   font-size: 1.5rem;
 }
@@ -113,4 +117,24 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+
+.mainnav ul{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  font-family: 'Roboto Slab', serif;
+  padding-left: 0px;
+  
+  background-color: rgb(228, 169, 169);
+  padding : 1rem;
+}
+
+.mainnav ul li {
+  margin: 0 24px;
+  list-style: none;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
 }
