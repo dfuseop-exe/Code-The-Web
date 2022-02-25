@@ -1,0 +1,21 @@
+.container {
+    padding: 0 2rem;
+}
+
+.main {
+    min-height: 100vh;
+    font-family: 'Open Sans';
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.blogs h3{
+    cursor: pointer;
+}
+
+.main h2{
+    font-family: 'Roboto Slab', serif;
+}

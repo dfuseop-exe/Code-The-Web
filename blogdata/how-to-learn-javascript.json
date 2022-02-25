@@ -1,0 +1,5 @@
+{
+    "title" : "How to learn JavaScript" ,
+    "description" : "JavaScript is a free scripting language that works on client-side as well as server-side. It is text-based and works along-side HTML and CSS to enhance code functionality and add interactive elements. In short, JS can bring life to otherwise boring and static web pages. JS is interpreted, which means the code need not be compiled. For huge projects that use a lot of interactive content, separate JavaScript files with the extension .js are created. However, JS can also be embedded in HTML code using <script> tag. Some common use-cases of JS are interactive maps, live news updates, form validations, creating landing pages, etc.",
+    "author": "Sushant Shinde"
+}
