@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -30,7 +29,7 @@ export default function Home() {
 
       <h1 className={styles.title}>Welcome To <span>Code The Web</span></h1>
 
-      <Image className={styles.myimg} src="/home.jpg" height={427} width={1920}/>
+      <img className={styles.myimg} src="/home.jpg" height={427} width={1920} />
 
       <p className={styles.description}>This is a Blog for coders</p>
 

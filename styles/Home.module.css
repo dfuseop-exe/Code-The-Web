@@ -130,5 +130,7 @@
 
 .myimg{
   border-radius: 10px;
+  height: auto;
+  width: 1350px;
 }
 

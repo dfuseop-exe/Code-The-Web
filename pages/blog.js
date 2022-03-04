@@ -1,10 +1,11 @@
 import Link from 'next/link'
 import React, { useEffect , useState } from 'react'
 import styles from '../styles/Blog.module.css'
+import * as fs from 'fs';
 
 const Blog = (props)=> {
 
-  const [blogpost, setBlogpost] = useState(props.parsed) ;
+  const [blogpost, setBlogpost] = useState(props.allData) ;
 
   return (
     <div className={styles.container}>
@@ -14,7 +15,7 @@ const Blog = (props)=> {
           {
             blogpost.map((ele)=>{
               return(
-                <div className={styles.blogs}>
+                <div className={styles.blogs} key={ele.slug}>
                   <div className="blogItem">
                   <Link href={`/blogpost/${ele.slug}`}><h3>{ele.title}</h3></Link>
                     <p>{ele.description.substr(0,380)} .....</p>
@@ -32,12 +33,18 @@ const Blog = (props)=> {
 export default Blog
 
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
 
-    let data = await fetch('http://localhost:3000/api/blogs');
-    let parsed = await data.json();
+  let data = await fs.promises.readdir('blogdata');
+    let allData = [] ;
+    let myfile ;
+    for (let i = 0 ; i < data.length ; i++) {
+      const ele = data[i];
+      myfile = await fs.promises.readFile(('blogdata/' + ele) , 'utf-8');
+      allData.push(JSON.parse(myfile));
+    }
 
   return {
-    props: {parsed}, // will be passed to the page component as props
+    props: {allData}, // will be passed to the page component as props
   }
 }
